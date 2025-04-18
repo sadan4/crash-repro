@@ -5,7 +5,6 @@ import { ExtensionContext, languages, Uri } from "vscode";
 
 export function activate(context: ExtensionContext) {
     context.subscriptions.push(
-
         languages.registerReferenceProvider({ language: "javascript" }, new ReferenceProvider()),
     );
 
