@@ -1,11 +1,13 @@
-import { ReferenceProvider } from "./folder1/folder2";
+import { Crasher } from "./folder1";
 
-import { ExtensionContext, languages, Uri } from "vscode";
+import { commands, ExtensionContext } from "vscode";
 
 
 export function activate(context: ExtensionContext) {
     context.subscriptions.push(
-        languages.registerReferenceProvider({ language: "javascript" }, new ReferenceProvider()),
+        commands.registerCommand("crash-repro.hello-crash", async () => {
+            new Crasher().generateReferences(null);
+        })
     );
 
 }

@@ -22,8 +22,8 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "esbuild-sample.hello-esbuild",
-				"title": "Hello esbuild"
+				"command": "crash-repro.hello-crash",
+				"title": "Hello crash"
 			}
 		]
 	},
