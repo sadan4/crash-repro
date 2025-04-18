@@ -5,7 +5,7 @@ import { commands, ExtensionContext } from "vscode";
 
 export function activate(context: ExtensionContext) {
     context.subscriptions.push(
-        commands.registerCommand("crash-repro.hello-crash", async () => {
+        commands.registerCommand("crash-repro.hello-crash", () => {
             new Crasher().generateReferences(null);
         })
     );
